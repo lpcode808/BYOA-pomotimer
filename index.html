@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Timer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="light-mode">
+    <div class="container">
+        <div class="theme-controls">
+            <button id="darkModeToggle">Toggle Dark Mode</button>
+            <div class="color-picker">
+                <label for="accentColor">Accent Color:</label>
+                <input type="color" id="accentColor" value="#ff4444">
+            </div>
+        </div>
+
+        <div class="timer">
+            <div class="timer-container">
+                <h1 id="time">25:00</h1>
+                <div class="controls">
+                    <button id="start">Start</button>
+                    <button id="pause" class="hidden">Pause</button>
+                    <button id="reset">Reset</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="mode-selector">
+            <button class="mode-btn active" data-time="25">Pomodoro</button>
+            <button class="mode-btn" data-time="5">Short Break</button>
+            <button class="mode-btn" data-time="15">Long Break</button>
+        </div>
+
+        <div class="todo-section">
+            <h2>Tasks</h2>
+            <div class="todo-list" id="todoList">
+                <div class="todo-item" draggable="true">
+                    <input type="text" placeholder="Enter task 1...">
+                    <span class="drag-handle">≡</span>
+                </div>
+                <div class="todo-item" draggable="true">
+                    <input type="text" placeholder="Enter task 2...">
+                    <span class="drag-handle">≡</span>
+                </div>
+                <div class="todo-item" draggable="true">
+                    <input type="text" placeholder="Enter task 3...">
+                    <span class="drag-handle">≡</span>
+                </div>
+            </div>
+        </div>
+        <div class="active-task hidden">
+            <p id="currentTask"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 

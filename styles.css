@@ -1,0 +1,145 @@
+:root {
+    --accent-color: #ff4444;
+    --bg-color: #ffffff;
+    --text-color: #333333;
+    --button-hover: #eeeeee;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    text-align: center;
+    padding: 20px;
+}
+
+.timer {
+    margin: 30px 0;
+}
+
+#time {
+    font-size: 6rem;
+    margin: 20px 0;
+    color: var(--accent-color);
+}
+
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: var(--accent-color);
+    color: white;
+    transition: opacity 0.3s;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.mode-btn {
+    background-color: transparent;
+    color: var(--text-color);
+    border: 2px solid var(--accent-color);
+}
+
+.mode-btn.active {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+.theme-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    --bg-color: #1a1a1a;
+    --text-color: #ffffff;
+    --button-hover: #333333;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.timer-container {
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.todo-section {
+    margin-top: 2rem;
+    padding: 1rem;
+}
+
+.todo-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    max-width: 400px;
+    margin: 1rem auto;
+}
+
+.todo-item {
+    display: flex;
+    align-items: center;
+    background-color: var(--bg-color);
+    border: 1px solid var(--accent-color);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.todo-item.dragging {
+    opacity: 0.5;
+}
+
+.todo-item input {
+    flex: 1;
+    padding: 0.8rem;
+    border: none;
+    background: transparent;
+    color: var(--text-color);
+    font-size: 1rem;
+}
+
+.todo-item input:focus {
+    outline: none;
+}
+
+.drag-handle {
+    padding: 0.8rem;
+    cursor: move;
+    color: var(--accent-color);
+    user-select: none;
+}
+
+.active-task {
+    margin-top: 2rem;
+    padding: 1rem;
+    font-size: 1.2rem;
+    color: var(--accent-color);
+    border: 1px solid var(--accent-color);
+    border-radius: 4px;
+    max-width: 400px;
+    margin: 1rem auto;
+}
